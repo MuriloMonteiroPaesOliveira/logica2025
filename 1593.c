@@ -1,21 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int T, i, count, num;
+    int N, i;
+    float a, b, c, media;
 
-    scanf("%d", &T);
+    scanf("%d", &N);
+    for (i = 0; i < N; i++) {
+        scanf("%f %f %f", &a, &b, &c);
 
-    for (i = 0; i < T; i++) {
-        scanf("%d", &num);
-    	count=0;
-        while (num > 0) {
-            if (num % 2 == 1) {
-                count++;
-            }
-            num /= 2;
-        }
+        media = (a * 2 + b * 3 + c * 5) / 10;
 
-        printf("%d\n", count);
+        printf("%.1f\n", media);
     }
 
     return 0;
